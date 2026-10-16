@@ -1,0 +1,31 @@
+﻿node_modules/
+dist/
+coverage/
+.env
+.env.*
+!.env.example
+*.log
+.DS_Store
+.idea/
+.vscode/*
+!.vscode/extensions.json
+
+# TypeScript incremental build cache
+*.tsbuildinfo
+
+# Scripts SQL locais de teste manual
+.check-outbox-publisher.sql
+.e2e-wager-test.sql
+
+# Arquivos gerados durante testes locais
+/.financial-concurrency-results/
+/.sqs-*.json
+
+# Pacotes temporarios de patches
+/*.zip
+
+# Instrucoes intermediarias de desenvolvimento
+/LEIA-ME*
+
+# Snapshots de bancos temporarios
+/src/database/migrations/.snapshot-jungle_gaming_*test*.json
