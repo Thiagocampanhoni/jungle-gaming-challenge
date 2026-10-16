@@ -154,7 +154,7 @@ Foram executadas verificações manuais com containers reais para: rollback/refu
 
 **Caso de concorrência observado:** wallet com R$ 100,00, duas `BET` de R$ 80,00; uma `PROCESSED`, outra `REJECTED` por `INSUFFICIENT_FUNDS`, saldo final **R$ 20,00**, **um débito** e reconciliação com diferença zero. Reentregas posteriores mantiveram esses invariantes.
 
-Os scripts de diagnóstico em `scripts/` podem conter IDs e nomes de bancos específicos do ambiente de teste. Antes de executá-los em outro computador, revise seus parâmetros; eles não substituem uma suíte de integração reprodutível em ambiente recém-criado.
+Os testes de integração com PostgreSQL e LocalStack foram executados manualmente durante o desenvolvimento. Os scripts auxiliares específicos desse ambiente não acompanham o repositório. O script versionado `scripts/provision-sqs.mjs` permite provisionar as filas FIFO e suas respectivas DLQs. A automatização completa dos testes de integração em um ambiente isolado permanece como melhoria futura.
 
 ## Observabilidade e operação
 
